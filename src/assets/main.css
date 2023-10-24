@@ -1,0 +1,28 @@
+@import "./base.css";
+
+#app {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 2rem;
+	min-height: 100vh;
+
+	font-weight: normal;
+}
+
+a,
+.green {
+	text-decoration: none;
+	color: var(--vue-green);
+	transition: 0.4s;
+}
+
+@media (hover: hover) {
+	a:hover {
+		background-color: var(--vue-green-hovered);
+	}
+}
+
+img {
+	width: 100%;
+	object-fit: contain;
+}

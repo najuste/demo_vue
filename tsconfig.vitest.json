@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.app.json",
+  "exclude": [],
+  "files": [
+    "src/components/TheButton.vue",
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "lib": [],
+    "types": ["node", "jsdom"]
+  }
+}
