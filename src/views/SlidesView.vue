@@ -107,5 +107,6 @@ export default {
 .navigation {
   display: flex;
   justify-content: space-between;
+  margin-top: 2em;
 }
 </style>

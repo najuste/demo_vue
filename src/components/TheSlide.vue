@@ -2,16 +2,16 @@
     <div class="slide">
         <h1>{{ slide.title }}</h1>
         <ul class="points">
-            <li v-for="point in $props.slide.points" :key="point">
+            <li v-for="point in slide.points" :key="point">
                 {{ point }}
             </li>
         </ul>
         <p>{{ slide.body }}</p>
-
-        <div v-if="$props.slide.img" class="image" v-html="JSON.parse(slide.img)"></div>
-        <pre v-if="$props.slide.code">
-            <code>{{ decodedCode }}</code>
-        </pre>
+        <div v-if="slide.img" class="image" v-html="JSON.parse(slide.img)"></div>
+        <div v-if="slide.code" class="code-container">
+            <highlightjs autodetect :code="decodedCode" />
+            <!-- <code>{{ decodedCode }}</code> -->
+        </div>
     </div>
 </template>
 
@@ -59,15 +59,8 @@ pre {
     max-width: 100%
 }
 
-pre {
-    padding: 2em;
+.code-container {
     white-space: pre-wrap;
     font-family: monospace;
-    backdrop-filter: contrast(0.5);
-    border-radius: 5px;
-}
-
-.slide {
-    margin-bottom: 2em;
 }
 </style>
