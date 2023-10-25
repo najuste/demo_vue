@@ -108,15 +108,11 @@ app.mount("#app");
 
 # How to start with Vue.js: scafolling
 
-- From Node
-  `npm create vue@latest && cd my-project && npm install && npm run dev`
-- Vue CLI
-  `npm install -g @vue/cli && vue create my-project && cd my-project && npm run serve`
-- Vite
-  `npm install -g create-vite && create-vite my-project --template vue && cd my-project && npm run dev`
+- From Node: `npm create vue@latest && cd my-project && npm install && npm run dev`
+- Vue CLI: `npm install -g @vue/cli && vue create my-project && cd my-project && npm run serve`
+- Vite: `npm install -g create-vite && create-vite my-project --template vue && cd my-project && npm run dev`
 - other tool are less known
-- no need to scafold: import Vue as script directly from `<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>`
-  And write your vue code
+- no need to scafold: import Vue as script directly from `<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>` and write your vue code
 
 # Vue.js main feature: HTML templates within component
 
@@ -162,11 +158,16 @@ function Smth() {
 
 <img src="https://i.imgur.com/Mi9qblk.png">
 
+# Vue.js syntax: slots
+
+<img src="/src/assets/img/vue-slots.png">
+
 # Vue Router basic setup
 
 - router exposes all the routes with components to render
 - using in html with router-link or also accessing $router and $route globals
-  <img src="/src/assets/img/Vue-Router-Cheat-Sheet1.jpg">
+
+<img src="/src/assets/img/Vue-Router-Cheat-Sheet1.jpg">
 
 # Vue Router: guards
 

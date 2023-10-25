@@ -43,13 +43,13 @@
   "code": "<div id=\\\"app\\\">\\\\n  <h1>{{ message }}</h1>\\\\n  <ul>\\\\n    <li v-for=\\\"item in items\\\" :key=\\\"item\\\">{{ item }}</li>\\\\n  </ul>\\\\n  <button @click=\\\"addItem\\\">Add Item</button>\\\\n</div>\\\\n<script src=\\\"vue.global.js\\\"></script>\\\\n<script>\\\\nconst app = Vue.createApp({\\\\n\\tdata() {\\\\n\\t\\treturn {\\\\n\\t\\t\\tmessage: \\\"Hello Vue!\\\",\\\\n\\t\\t\\titems: [\\\"apple\\\", \\\"banana\\\", \\\"orange\\\"],\\\\n\\t\\t};\\\\n\\t},\\\\n\\tmethods: {\\\\n\\t\\taddItem() {\\\\n\\t\\t\\tthis.items.push(\\\"pear\\\");\\\\n\\t\\t},\\\\n\\t},\\\\n});\\\\napp.mount(\\\"#app\\\");\\\\n</script>\\\\n\\\\n"
 },{
   "title": "How to start with Vue.js: scafolling",
-  "body": "  `npm create vue@latest && cd my-project && npm install && npm run dev`  `npm install -g @vue/cli && vue create my-project && cd my-project && npm run serve`  `npm install -g create-vite && create-vite my-project --template vue && cd my-project && npm run dev`  And write your vue code",
+  "body": "",
   "points": [
-    "From Node",
-    "Vue CLI",
-    "Vite",
+    "From Node: `npm create vue@latest && cd my-project && npm install && npm run dev`",
+    "Vue CLI: `npm install -g @vue/cli && vue create my-project && cd my-project && npm run serve`",
+    "Vite: `npm install -g create-vite && create-vite my-project --template vue && cd my-project && npm run dev`",
     "other tool are less known",
-    "no need to scafold: import Vue as script directly from `<script src=\"https://unpkg.com/vue@3/dist/vue.global.js\"></script>`"
+    "no need to scafold: import Vue as script directly from `<script src=\"https://unpkg.com/vue@3/dist/vue.global.js\"></script>` and write your vue code"
   ],
   "img": "\"\"",
   "code": ""
@@ -86,15 +86,29 @@
   "img": "\"<img src=\\\"https://i.imgur.com/Mi9qblk.png\\\">\"",
   "code": ""
 },{
-  "title": "Vue Router",
+  "title": "Vue.js syntax: slots",
   "body": "",
   "points": [],
-  "img": "\"<img src=\\\"/src/assets/img/Vue-Router-Cheat-Sheet2.jpg\\\">\"",
+  "img": "\"<img src=\\\"/src/assets/img/vue-slots.png\\\">\"",
   "code": ""
 },{
-  "title": "Vue",
+  "title": "Vue Router basic setup",
   "body": "",
-  "points": [],
-  "img": "\"<img src=\\\"/src/assets/img/Vue-Router-Cheat-Sheet2.jpg\\\">\"",
+  "points": [
+    "router exposes all the routes with components to render",
+    "using in html with router-link or also accessing $router and $route globals"
+  ],
+  "img": "\"<img src=\\\"/src/assets/img/Vue-Router-Cheat-Sheet1.jpg\\\">\"",
+  "code": ""
+},{
+  "title": "Vue Router: guards",
+  "body": "",
+  "points": [
+    "global navigation guards as router.beforeEach check if authenticated, can access, or afterEach for sending analytics",
+    "per-route guards beforeEnder to fetch data or remove query params",
+    "routes can have meta fields for example flag if auth is required or pass some props",
+    "routes can be lazy loaded"
+  ],
+  "img": "\"\"",
   "code": ""
 }]

@@ -64,7 +64,7 @@ append_slide() {
     slides+=("$json")
 
     # Reset variables
-    unset slide_points slide_code slide_body
+    unset slide_points slide_code slide_body slide_img
 }
 
 while IFS= read -r line
