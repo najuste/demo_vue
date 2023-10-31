@@ -146,7 +146,7 @@ function Smth() {
 - spliting UI
 - stored in .vue files that can contain template, script and style
 
-<img src="https://i.imgur.com/tE8XNbq.png">
+<img src="/src/assets/img/vue-anatomy.png">
 
 # Vue.js syntax: HTML bindings, directives, events - simple html rendering
 
@@ -156,7 +156,7 @@ function Smth() {
 - value binding ':', accesing also native html attributes; modifier '.attr' to bind to attributes(!)
 - 2way value binding v-model on \<input />
 
-<img src="https://i.imgur.com/Mi9qblk.png">
+<img src="/src/assets/img/vue-syntax.png">
 
 # Vue.js syntax: slots
 

@@ -18,10 +18,6 @@ import HelloWorld from "./components/HelloWorld.vue";
 			</div>
 		</template>
 	</header>
-
-
-
-
 	<RouterView />
 </template>
 

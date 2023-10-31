@@ -1,9 +1,7 @@
 <template>
   <main class="slides">
     <ProgressBar :progress="progressBarProps" @updateCurrentIndex="updateProgressIndex" />
-
     <template v-if="currentSlideIndex < slides.length">
-
       <TheSlide :slide="slides[currentSlideIndex]" />
     </template>
 
@@ -14,8 +12,6 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen></iframe>
     </template>
-
-
     <div class="navigation">
       <TheButton @click="currentSlideIndex > 0 && currentSlideIndex--">Prev</TheButton>
       <TheButton @click="currentSlideIndex < slides.length && currentSlideIndex++">Next</TheButton>

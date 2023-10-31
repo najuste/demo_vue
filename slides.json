@@ -1,114 +1,126 @@
-[{
-  "title": "Vue released in 2014",
-  "body": "",
-  "points": [
-    "Evan You, ex-Googler (Angular, Meteor) - a single creator",
-    "a view layer only"
-  ],
-  "img": "\"\"",
-  "code": "<div id=\\\"app\\\">\\\\n  <h1>{{ message }}</h1>\\\\n  <ul>\\\\n    <li v-repeat=\\\"item: items\\\">{{ item }}</li>\\\\n  </ul>\\\\n  <button v-on=\\\"click: addItem\\\">Add Item</button>\\\\n</div>\\\\n<script src=\\\"vue.js\\\"></script>\\\\n<script>\\\\nvar app = new Vue({\\\\n\\tel: \\\"#app\\\",\\\\n\\tdata: {\\\\n\\t\\tmessage: \\\"Hello Vue!\\\",\\\\n\\t\\titems: [\\\"apple\\\", \\\"banana\\\", \\\"orange\\\"],\\\\n\\t},\\\\n\\tmethods: {\\\\n\\t\\taddItem: function () {\\\\n\\t\\t\\tthis.items.push(\\\"pear\\\");\\\\n\\t\\t},\\\\n\\t},\\\\n});\\\\n</script>\\\\n\\\\n"
-},{
-  "title": "Vue2.0 released in 2016 Sept",
-  "body": "",
-  "points": [
-    "11 active maintainers",
-    "25.857 Github starts",
-    "Major rewrite with improvements: vDOM implementation, flexible components, Vuex, Vue Router, SSR solution, Typescript support"
-  ],
-  "img": "\"\"",
-  "code": "<div id=\\\"app\\\">\\\\n  <h1>{{ message }}</h1>\\\\n  <ul>\\\\n    <li v-for=\\\"item in items\\\" :key=\\\"item\\\">{{ item }}</li>\\\\n  </ul>\\\\n  <button @click=\\\"addItem\\\">Add Item</button>\\\\n</div>\\\\n<script src=\\\"vue.js\\\"></script>\\\\n<script>\\\\nvar app = new Vue({\\\\n\\tel: \\\"#app\\\",\\\\n\\tdata: function () {\\\\n\\t\\treturn {\\\\n\\t\\t\\tmessage: \\\"Hello Vue!\\\",\\\\n\\t\\t\\titems: [\\\"apple\\\", \\\"banana\\\", \\\"orange\\\"],\\\\n\\t\\t};\\\\n\\t},\\\\n\\tmethods: {\\\\n\\t\\taddItem: function () {\\\\n\\t\\t\\tthis.items.push(\\\"pear\\\");\\\\n\\t\\t},\\\\n\\t},\\\\n});\\\\n</script>\\\\n\\\\n"
-},{
-  "title": "Vue2.7 released in 2022 July",
-  "body": "",
-  "points": [
-    "192.882 Github stars",
-    "the final minor release"
-  ],
-  "img": "\"\"",
-  "code": ""
-},{
-  "title": "Vue3.0 released in 2020 Sept 18.",
-  "body": "",
-  "points": [
-    "30 active maintainers",
-    "167.787 Github stars",
-    "composition API for flexible component logic",
-    "re-written reactivity system for better performance and compatibility",
-    "has a compiler that supports multiple build targets: web, native, ...",
-    "smaller bundle: smaller core size and better tree-shaking support",
-    "kind of TS native with official typings for the core library and ecosystem tools",
-    "enhanced support for custom elements and web components"
-  ],
-  "img": "\"\"",
-  "code": "<div id=\\\"app\\\">\\\\n  <h1>{{ message }}</h1>\\\\n  <ul>\\\\n    <li v-for=\\\"item in items\\\" :key=\\\"item\\\">{{ item }}</li>\\\\n  </ul>\\\\n  <button @click=\\\"addItem\\\">Add Item</button>\\\\n</div>\\\\n<script src=\\\"vue.global.js\\\"></script>\\\\n<script>\\\\nconst app = Vue.createApp({\\\\n\\tdata() {\\\\n\\t\\treturn {\\\\n\\t\\t\\tmessage: \\\"Hello Vue!\\\",\\\\n\\t\\t\\titems: [\\\"apple\\\", \\\"banana\\\", \\\"orange\\\"],\\\\n\\t\\t};\\\\n\\t},\\\\n\\tmethods: {\\\\n\\t\\taddItem() {\\\\n\\t\\t\\tthis.items.push(\\\"pear\\\");\\\\n\\t\\t},\\\\n\\t},\\\\n});\\\\napp.mount(\\\"#app\\\");\\\\n</script>\\\\n\\\\n"
-},{
-  "title": "How to start with Vue.js: scafolling",
-  "body": "",
-  "points": [
-    "From Node: `npm create vue@latest && cd my-project && npm install && npm run dev`",
-    "Vue CLI: `npm install -g @vue/cli && vue create my-project && cd my-project && npm run serve`",
-    "Vite: `npm install -g create-vite && create-vite my-project --template vue && cd my-project && npm run dev`",
-    "other tool are less known",
-    "no need to scafold: import Vue as script directly from `<script src=\"https://unpkg.com/vue@3/dist/vue.global.js\"></script>` and write your vue code"
-  ],
-  "img": "\"\"",
-  "code": ""
-},{
-  "title": "Vue.js main feature: HTML templates within component",
-  "body": "",
-  "points": [
-    "primarly HTML templates and not JSX (though available). Better human readability and faster learning curve",
-    "components contain html (\\<template>), \\<script> and \\<style>",
-    "vue template separate from script",
-    "react is script only: jsx extension to bind all in one file"
-  ],
-  "img": "\"\"",
-  "code": "<template>\\\\n\\t<div>\\\\n\\t\\t<h1 v-if=\\\"isUserLoggedIn\\\">Welcome, User!</h1>\\\\n\\t\\t<h1 v-else>Welcome, Guest!</h1>\\\\n\\t</div>\\\\n</template>\\\\n\\\\nfunction Smth() {\\\\n\\treturn (\\\\n\\t\\t<div>\\\\n\\t\\t\\t{isUserLoggedIn ? <h1>Welcome, User!</h1> : <h1>Welcome, Guest!</h1>}\\\\n\\t\\t</div>\\\\n\\t);\\\\n}\\\\n\\\\n"
-},{
-  "title": "Vue.js syntax: component anatomy",
-  "body": "",
-  "points": [
-    "spliting UI",
-    "stored in .vue files that can contain template, script and style"
-  ],
-  "img": "\"<img src=\\\"https://i.imgur.com/tE8XNbq.png\\\">\"",
-  "code": ""
-},{
-  "title": "Vue.js syntax: HTML bindings, directives, events - simple html rendering",
-  "body": "",
-  "points": [
-    "v-if, v-else; load and hide v-show;",
-    "render as html: v-html;",
-    "lists: v-for=\"(value, name, index) in object\"",
-    "value binding ':', accesing also native html attributes; modifier '.attr' to bind to attributes(!)",
-    "2way value binding v-model on \\<input />"
-  ],
-  "img": "\"<img src=\\\"https://i.imgur.com/Mi9qblk.png\\\">\"",
-  "code": ""
-},{
-  "title": "Vue.js syntax: slots",
-  "body": "",
-  "points": [],
-  "img": "\"<img src=\\\"/src/assets/img/vue-slots.png\\\">\"",
-  "code": ""
-},{
-  "title": "Vue Router basic setup",
-  "body": "",
-  "points": [
-    "router exposes all the routes with components to render",
-    "using in html with router-link or also accessing $router and $route globals"
-  ],
-  "img": "\"<img src=\\\"/src/assets/img/Vue-Router-Cheat-Sheet1.jpg\\\">\"",
-  "code": ""
-},{
-  "title": "Vue Router: guards",
-  "body": "",
-  "points": [
-    "global navigation guards as router.beforeEach check if authenticated, can access, or afterEach for sending analytics",
-    "per-route guards beforeEnder to fetch data or remove query params",
-    "routes can have meta fields for example flag if auth is required or pass some props",
-    "routes can be lazy loaded"
-  ],
-  "img": "\"\"",
-  "code": ""
-}]
+[
+  {
+    "title": "Vue released in 2014",
+    "body": "",
+    "points": [
+      "Evan You, ex-Googler (Angular, Meteor) - a single creator",
+      "a view layer only"
+    ],
+    "img": "\"\"",
+    "code": "<div id=\\\"app\\\">\\\\n  <h1>{{ message }}</h1>\\\\n  <ul>\\\\n    <li v-repeat=\\\"item: items\\\">{{ item }}</li>\\\\n  </ul>\\\\n  <button v-on=\\\"click: addItem\\\">Add Item</button>\\\\n</div>\\\\n<script src=\\\"vue.js\\\"></script>\\\\n<script>\\\\nvar app = new Vue({\\\\n\\tel: \\\"#app\\\",\\\\n\\tdata: {\\\\n\\t\\tmessage: \\\"Hello Vue!\\\",\\\\n\\t\\titems: [\\\"apple\\\", \\\"banana\\\", \\\"orange\\\"],\\\\n\\t},\\\\n\\tmethods: {\\\\n\\t\\taddItem: function () {\\\\n\\t\\t\\tthis.items.push(\\\"pear\\\");\\\\n\\t\\t},\\\\n\\t},\\\\n});\\\\n</script>\\\\n\\\\n"
+  },
+  {
+    "title": "Vue2.0 released in 2016 Sept",
+    "body": "",
+    "points": [
+      "11 active maintainers",
+      "25.857 Github starts",
+      "Major rewrite with improvements: vDOM implementation, flexible components, Vuex, Vue Router, SSR solution, Typescript support"
+    ],
+    "img": "\"\"",
+    "code": "<div id=\\\"app\\\">\\\\n  <h1>{{ message }}</h1>\\\\n  <ul>\\\\n    <li v-for=\\\"item in items\\\" :key=\\\"item\\\">{{ item }}</li>\\\\n  </ul>\\\\n  <button @click=\\\"addItem\\\">Add Item</button>\\\\n</div>\\\\n<script src=\\\"vue.js\\\"></script>\\\\n<script>\\\\nvar app = new Vue({\\\\n\\tel: \\\"#app\\\",\\\\n\\tdata: function () {\\\\n\\t\\treturn {\\\\n\\t\\t\\tmessage: \\\"Hello Vue!\\\",\\\\n\\t\\t\\titems: [\\\"apple\\\", \\\"banana\\\", \\\"orange\\\"],\\\\n\\t\\t};\\\\n\\t},\\\\n\\tmethods: {\\\\n\\t\\taddItem: function () {\\\\n\\t\\t\\tthis.items.push(\\\"pear\\\");\\\\n\\t\\t},\\\\n\\t},\\\\n});\\\\n</script>\\\\n\\\\n"
+  },
+  {
+    "title": "Vue2.7 released in 2022 July",
+    "body": "",
+    "points": [
+      "192.882 Github stars",
+      "the final minor release"
+    ],
+    "img": "\"\"",
+    "code": ""
+  },
+  {
+    "title": "Vue3.0 released in 2020 Sept 18.",
+    "body": "",
+    "points": [
+      "30 active maintainers",
+      "167.787 Github stars",
+      "composition API for flexible component logic",
+      "re-written reactivity system for better performance and compatibility",
+      "has a compiler that supports multiple build targets: web, native, ...",
+      "smaller bundle: smaller core size and better tree-shaking support",
+      "kind of TS native with official typings for the core library and ecosystem tools",
+      "enhanced support for custom elements and web components"
+    ],
+    "img": "\"\"",
+    "code": "<div id=\\\"app\\\">\\\\n  <h1>{{ message }}</h1>\\\\n  <ul>\\\\n    <li v-for=\\\"item in items\\\" :key=\\\"item\\\">{{ item }}</li>\\\\n  </ul>\\\\n  <button @click=\\\"addItem\\\">Add Item</button>\\\\n</div>\\\\n<script src=\\\"vue.global.js\\\"></script>\\\\n<script>\\\\nconst app = Vue.createApp({\\\\n\\tdata() {\\\\n\\t\\treturn {\\\\n\\t\\t\\tmessage: \\\"Hello Vue!\\\",\\\\n\\t\\t\\titems: [\\\"apple\\\", \\\"banana\\\", \\\"orange\\\"],\\\\n\\t\\t};\\\\n\\t},\\\\n\\tmethods: {\\\\n\\t\\taddItem() {\\\\n\\t\\t\\tthis.items.push(\\\"pear\\\");\\\\n\\t\\t},\\\\n\\t},\\\\n});\\\\napp.mount(\\\"#app\\\");\\\\n</script>\\\\n\\\\n"
+  },
+  {
+    "title": "How to start with Vue.js: scafolling",
+    "body": "",
+    "points": [
+      "From Node: `npm create vue@latest && cd my-project && npm install && npm run dev`",
+      "Vue CLI: `npm install -g @vue/cli && vue create my-project && cd my-project && npm run serve`",
+      "Vite: `npm install -g create-vite && create-vite my-project --template vue && cd my-project && npm run dev`",
+      "other tool are less known",
+      "no need to scafold: import Vue as script directly from `<script src=\"https://unpkg.com/vue@3/dist/vue.global.js\"></script>` and write your vue code"
+    ],
+    "img": "\"\"",
+    "code": ""
+  },
+  {
+    "title": "Vue.js main feature: HTML templates within component",
+    "body": "",
+    "points": [
+      "primarly HTML templates and not JSX (though available). Better human readability and faster learning curve",
+      "components contain html (\\<template>), \\<script> and \\<style>",
+      "vue template separate from script",
+      "react is script only: jsx extension to bind all in one file"
+    ],
+    "img": "\"\"",
+    "code": "<template>\\\\n\\t<div>\\\\n\\t\\t<h1 v-if=\\\"isUserLoggedIn\\\">Welcome, User!</h1>\\\\n\\t\\t<h1 v-else>Welcome, Guest!</h1>\\\\n\\t</div>\\\\n</template>\\\\n\\\\nfunction Smth() {\\\\n\\treturn (\\\\n\\t\\t<div>\\\\n\\t\\t\\t{isUserLoggedIn ? <h1>Welcome, User!</h1> : <h1>Welcome, Guest!</h1>}\\\\n\\t\\t</div>\\\\n\\t);\\\\n}\\\\n\\\\n"
+  },
+  {
+    "title": "Vue.js syntax: component anatomy",
+    "body": "",
+    "points": [
+      "spliting UI",
+      "stored in .vue files that can contain template, script and style"
+    ],
+    "img": "\"<img src=\\\"/src/assets/img/vue-anatomy.png\\\">\"",
+    "code": ""
+  },
+  {
+    "title": "Vue.js syntax: HTML bindings, directives, events - simple html rendering",
+    "body": "",
+    "points": [
+      "v-if, v-else; load and hide v-show;",
+      "render as html: v-html;",
+      "lists: v-for=\"(value, name, index) in object\"",
+      "value binding ':', accesing also native html attributes; modifier '.attr' to bind to attributes(!)",
+      "2way value binding v-model on \\<input />"
+    ],
+    "img": "\"<img src=\\\"/src/assets/img/vue-syntax.png\\\">\"",
+    "code": ""
+  },
+  {
+    "title": "Vue.js syntax: slots",
+    "body": "",
+    "points": [],
+    "img": "\"<img src=\\\"/src/assets/img/vue-slots.png\\\">\"",
+    "code": ""
+  },
+  {
+    "title": "Vue Router basic setup",
+    "body": "",
+    "points": [
+      "router exposes all the routes with components to render",
+      "using in html with router-link or also accessing $router and $route globals"
+    ],
+    "img": "\"<img src=\\\"/src/assets/img/Vue-Router-Cheat-Sheet1.jpg\\\">\"",
+    "code": ""
+  },
+  {
+    "title": "Vue Router: guards",
+    "body": "",
+    "points": [
+      "global navigation guards as router.beforeEach check if authenticated, can access, or afterEach for sending analytics",
+      "per-route guards beforeEnder to fetch data or remove query params",
+      "routes can have meta fields for example flag if auth is required or pass some props",
+      "routes can be lazy loaded"
+    ],
+    "img": "\"\"",
+    "code": ""
+  }
+]
