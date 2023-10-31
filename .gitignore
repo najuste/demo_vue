@@ -1,1 +1,3 @@
 node_modules
+vitepress-slides/.vitepress/dist
+vitepress-slides/.vitepress/cache
